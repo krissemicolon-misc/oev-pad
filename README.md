@@ -1,6 +1,8 @@
-# modul-318-Student
+# Oev-Pad - ÜK M318 Projektarbeit
 
-Students!
-Fork this repository to your own Github account. Work there with this repository. The intructor will clone your repo for inspection and evaluation.
+## Struktur der Repository
 
-Have Fun!
+| Ordner | Inhalt                |
+| ------ | --------------------- |
+| docs   | Projekt Dokumentation |
+
