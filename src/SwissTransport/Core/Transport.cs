@@ -55,6 +55,22 @@
             return this.GetObject<Connections>(uri);
         }
 
+        public Connections GetConnections(string fromStation, string toStation, DateTime date)
+        {
+            if (string.IsNullOrEmpty(fromStation))
+            {
+                throw new ArgumentNullException(nameof(fromStation));
+            }
+
+            if (string.IsNullOrEmpty(toStation))
+            {
+                throw new ArgumentNullException(nameof(toStation));
+            }
+
+            var uri = new Uri($"{WebApiHost}connections?from={fromStation}&to={toStation}&date={date}");
+            return this.GetObject<Connections>(uri);
+        }
+
         public void Dispose()
         {
             this.httpClient?.Dispose();
