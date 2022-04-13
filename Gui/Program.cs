@@ -1,4 +1,4 @@
-namespace Gui
+namespace SwissTransportGui
 {
     internal static class Program
     {

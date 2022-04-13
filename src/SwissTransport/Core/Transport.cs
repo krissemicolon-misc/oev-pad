@@ -23,6 +23,15 @@
             return this.GetObject<Stations>(uri);
         }
 
+        public Stations GetNearestStations()
+        {
+            var locationUri = new Uri($"http://ip-api.com/line/?fields=lat,lon");
+            string[] location = this.GetPlainText(locationUri).Split("\n");
+
+            var uri = new Uri($"{WebApiHost}locations?x={location[0]}&y={location[1]}");
+            return this.GetObject<Stations>(uri);
+        }
+
         public StationBoardRoot GetStationBoard(string station, string id)
         {
             if (string.IsNullOrEmpty(station))
@@ -88,6 +97,20 @@
                 .GetResult();
 
             return JsonConvert.DeserializeObject<T>(content);
+        }
+
+        private string GetPlainText(Uri uri)
+        {
+            HttpResponseMessage response = this.httpClient
+                .GetAsync(uri)
+                .GetAwaiter()
+                .GetResult();
+            string content = response.Content
+                .ReadAsStringAsync()
+                .GetAwaiter()
+                .GetResult();
+
+            return content;
         }
     }
 }
