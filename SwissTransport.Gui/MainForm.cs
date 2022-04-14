@@ -162,9 +162,9 @@ namespace SwissTransport.Gui
 
                 List<Station> stations = transport.GetNearestStations().StationList;
 
-                for (int i = stations.Count - 1; i >= 0; --i)
+                foreach (Station station in stations)
                 {
-                    stationFinderStationList.Items.Add(stations[i].Name);
+                    stationFinderStationList.Items.Add(station.Name);
                 }
             }
             catch

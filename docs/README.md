@@ -1,11 +1,45 @@
-# Dokumentation
+# M318 Projektarbeit Dokumentation von Kris Huber
 
-- [Dokumentation](#dokumentation)
-  - [User Stories](#User Stories)
+- [User Stories](#User Stories)
   - [Test Fälle](#Test Fälle)
   - [Mockups](#mockups)
     - [Abfahrtstafel](#abfahrtstafel)
     - [Verbindungssuche](#verbindungssuche)
+
+
+
+## Inhaltsverzeichnis
+
+* [Einleitung](#einleitung)
+  * [Autor](#autor)
+  * [Projekt](#projekt)
+  * [Aufgabenstellung](#aufgabenstellung)
+  * [Anforderung](#anforderung) 
+  * [Zweck](#zweck) 
+* [Funktionen](#funktionen)
+* [Planung](#planung)
+  * [Usecases](#usecases)
+  * [UseCase Diagram](#udiagramm)
+  * [Aktiviäts Diagramm](#adiagramm)
+  * [Mockups](#mockups)
+* [Programmierrichtlinen](#programmierrichtlinen)
+  * [Namensgebung](#namensgebung)
+  * [Deklaration](#deklaration)
+  * [Kommentare](#kommentare)
+  * [Methoden, Schleifen, Verzweigungen, Try Catch](#methoden)
+* [Testing](#testing)
+  * [Testfälle](#testfaelle)
+  * [Testprotokoll](#testprotokoll)
+* [Installation Anleitung](#installationanleitung) 
+
+
+
+
+
+### Dokumentsinformationen
+
+* Autor: **Kris Huber**
+* Erstelldatum: **14.04.2022**
 
 ## User Stories
 
