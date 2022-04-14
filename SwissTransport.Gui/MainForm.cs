@@ -59,7 +59,7 @@ namespace SwissTransport.Gui
             {
                 departureBoardTable.Rows.Clear();
 
-                List<StationBoard> stationBoards = transport.GetStationBoard(departureBoardStationSearchTextBox.Text, "1").Entries;
+                List<StationBoard> stationBoards = transport.GetStationBoard(departureBoardStationSearchInput.Text, "1").Entries;
 
                 foreach (StationBoard stationBoard in stationBoards)
                 {
@@ -104,10 +104,10 @@ namespace SwissTransport.Gui
             {
                 string stationName = stationFinderStationList.GetItemText(stationFinderStationList.SelectedItem);
                 connectionFinderFromInput.Text = stationName;
-                departureBoardStationSearchTextBox.Text = stationName;
+                departureBoardStationSearchInput.Text = stationName;
 
                 connectionFinderFromInput.Focus();
-                applicationTabControl.SelectedIndex = 2;
+                applicationTabControl.SelectedIndex = 1;
             }
             catch
             {
@@ -122,7 +122,7 @@ namespace SwissTransport.Gui
                 connectionFinderToInput.Text = stationFinderStationList.GetItemText(stationFinderStationList.SelectedItem);
 
                 connectionFinderToInput.Focus();
-                applicationTabControl.SelectedIndex = 2;
+                applicationTabControl.SelectedIndex = 1;
             }
             catch
             {

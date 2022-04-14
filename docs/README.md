@@ -54,15 +54,109 @@ Diese Dokumentation ist dazu da, um die Projektarbeit in menschlicher Sprache le
 - Internetverbindung
 - Oev-Pad Applikation geöffnet
 
+### Verbindungen Suchen
+
+**Anforderung:** 1
+
+**Tab:** Connection Finder
+
+| Schritt | Aktivität                                | Erwartetes Resultat                                          |
+| ------- | ---------------------------------------- | ------------------------------------------------------------ |
+| 1       | In die From TextBox "Zug" eingeben       | Autocomplete Vorschläge                                      |
+| 2       | In die To TextBox "Luzern" eingeben      | Autocomplete Vorschläge                                      |
+| 3       | Auf den "View Connection" Button drücken | Es werden mindestens 4 ÖV-Verbindungen angezeigt die mich von Zug nach Luzern bringen. |
+
+---
+
+### Abfartstafel
+
+**Anforderung**: 2
+
+**Tab:** Departure Board
+
+| Schritt | Aktivität                                                    | Erwartetes Resultat                                          |
+| ------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1       | Ich gebe "Luzern" in die Station Name TextBox                | Autocomplete Vorschläge                                      |
+| 2       | Ich wähle von den Autocomplete Vorschlägen "Luzern, Bahnhof" aus | In der TextBox wird "Luzern, Bahnhof" eingesetzt             |
+| 3       | Ich drücke auf den "View Departure Board" Button             | Es wird minestens eine Verbindung von dieser Station in der GridDataView angezeigt. |
+
+---
+
 ### Station suchen
 
-**Anforderungen:** 1, 4
+**Anforderungen:** 3, 4
+
+**Tab:** Station Finder
+
+| Schritt | Aktivität                                   | Erwartetes Resultat                                          |
+| ------- | ------------------------------------------- | ------------------------------------------------------------ |
+| 1       | In das Station Name Textfeld "Be" eingeben  | Es werden keine Vorschläge angezeigt.                        |
+| 2       | In das Station Name Textfeld "Ber" eingeben | Es werden folgende Vorschläge im Dropdown angezeigt: "Bern", "Bern, Bahnhof", "Bern, Hirschengraben", "Bern, Zytglogge", "Bern, Wankdorf", "Bern, Bärenplatz", "Bern, Kocherplatz", "Bern, Brunnadernstrasse", "Bern, Helvetiaplatz", "Bern Europaplatz Süd" |
+| 3       | Klicke auf den Button "Find"                | Es werden folgende Resultate in der ListView angezeigt: "Bern", "Bern, Bahnhof", "Bern, Hirschengraben", "Bern, Zytglogge", "Bern, Wankdorf", "Bern, Bärenplatz", "Bern, Kocherplatz", "Bern, Brunnadernstrasse", "Bern, Helvetiaplatz", "Bern Europaplatz Süd" |
+
+### Verbindung mit Datum suchen
+
+**Anforderung:** 5
+
+**Tab:** Station Finder
+
+| Schritt | Aktivität                                    | Erwartetes Resultat                                          |
+| ------- | -------------------------------------------- | ------------------------------------------------------------ |
+| 1       | In die From TextBox "Zug" eingeben           | Autocomplete Vorschläge                                      |
+| 2       | In die To TextBox "Luzern" eingeben          | Autocomplete Vorschläge                                      |
+| 3       | Die Checkbox "Custom Date" anwählen          | Der Datepicker ist nun anklickbar                            |
+| 4       | Im DatePicker das Datum 21.04.2022 auswählen | Im DatePicker ist nun das Datum 21.04.2022 eingesetzt        |
+| 3       | Auf den "View Connection" Button drücken     | Es werden mindestens 4 ÖV-Verbindungen angezeigt die mich am 21sten April 2022 von Zug nach Luzern bringen. |
+
+---
+
+### Station in der Nähe
+
+**Anforderung:** 6
+
+**Tab:** Station Finder
+
+| Schritt | Aktivität                                     | Erwartetes Resultat                                     |
+| ------- | --------------------------------------------- | ------------------------------------------------------- |
+| 1       | Auf den "Find Nearest Station" Button drücken | In der ListView werden Station in meiner Nähe angezeigt |
+
+---
+
+### Karte
+
+**Anforderung:** 7
 
 **Tab:** Station Finder
 
 | Schritt | Aktivität                                                    | Erwartetes Resultat                                          |
 | ------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1       |                                                              | Es werden keine Vorschläge angezeigt.                        |
-| 1       | Ich gebe "luz" in die "From", "To" oder "Station" Textbox ein. | Es werden alle Haltestellen die mit Luzern anfgagen angezeigt (Luzern, Luzern Bahnhof, Luzern Kantonalbank, Luzern Pilatusplatz, Luzern,Schwanenpaltz, LuzernLuzernerhof, Luzern Allmend/Messe, Luzern Gütsch, LuzernKassernenplatz, Luzern Eichhof). |
-|         |                                                              |                                                              |
-|         |                                                              |                                                              |
+| 1       | Auf den "Find Nearest Station" Button drücken                | In der ListView werden Station in meiner Nähe angezeigt      |
+| 2       | Eine der Stationen in der ListView anwählen und auf den "View Location in Browser" Button drücken | Der eingestellte standard Browser wird geöffnet und es wird auf Über Google Maps der Standort der Station angezeigt. |
+
+---
+
+### Verbindung teilen
+
+**Anforderung:** 8
+
+**Tab:** Connection Finder
+
+| Schritt | Aktivität                                               | Erwartetes Resultat                                          |
+| ------- | ------------------------------------------------------- | ------------------------------------------------------------ |
+| 1       | In das Station Name Textfeld "Be" eingeben              | Es werden keine Vorschläge angezeigt.                        |
+| 2       | In das Station Name Textfeld "Ber" eingeben             | Es werden folgende Vorschläge im Dropdown angezeigt: "Bern", "Bern, Bahnhof", "Bern, Hirschengraben", "Bern, Zytglogge", "Bern, Wankdorf", "Bern, Bärenplatz", "Bern, Kocherplatz", "Bern, Brunnadernstrasse", "Bern, Helvetiaplatz", "Bern Europaplatz Süd" |
+| 3       | Klicke auf den Button "Find"                            | Es werden folgende Resultate in der ListView angezeigt: "Bern", "Bern, Bahnhof", "Bern, Hirschengraben", "Bern, Zytglogge", "Bern, Wankdorf", "Bern, Bärenplatz", "Bern, Kocherplatz", "Bern, Brunnadernstrasse", "Bern, Helvetiaplatz", "Bern Europaplatz Süd" |
+| 4       | Ich wähle eine der Verbindungen  an                     | -                                                            |
+| 5       | Ich drücke auf den "Share Connection over Email" button | Es erscheint ein Popup mit einem Externen Mail Client mit der ensprechender Verbindung im Body des Mails. |
+
+---
+
+### Take Me Home
+
+**Anforderung:** 9
+
+**Tab:** Connection Finder
+
+| Schritt | Aktivität                                 | Erwartetes Resultat                                          |
+| ------- | ----------------------------------------- | ------------------------------------------------------------ |
+| 1       | Ich drücke auf den "Take Me Home" Button. | Wenn ich den Home Stop schon gesetzt habe wird dieser im to eingesetzt und im from wird die mir am nächsten Station eingesetzt und es werden Verbindungen angezeigt die mich nach Hause bringen. Falls den Home Stop noch nicht gesetzt habe wird ein Dialog aufgemacht der mich den Home Stop Setzten lässt |

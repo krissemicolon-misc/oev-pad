@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.applicationTabControl = new System.Windows.Forms.TabControl();
-            this.overviewTab = new System.Windows.Forms.TabPage();
             this.stationFinderTab = new System.Windows.Forms.TabPage();
             this.stationFinderStationList = new System.Windows.Forms.ListBox();
             this.stationFinderForm = new System.Windows.Forms.GroupBox();
+            this.stationFinderStationInput = new System.Windows.Forms.ComboBox();
             this.stationFinderShowOnMapButton = new System.Windows.Forms.Button();
             this.stationFinderFindNearestButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -66,10 +66,9 @@
             this.departureBoardOperator = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departureBoardStop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departureBoardForm = new System.Windows.Forms.GroupBox();
+            this.departureBoardStationSearchInput = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.departureBoardStationSearchTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.stationFinderStationInput = new System.Windows.Forms.ComboBox();
             this.applicationTabControl.SuspendLayout();
             this.stationFinderTab.SuspendLayout();
             this.stationFinderForm.SuspendLayout();
@@ -83,7 +82,6 @@
             // 
             // applicationTabControl
             // 
-            this.applicationTabControl.Controls.Add(this.overviewTab);
             this.applicationTabControl.Controls.Add(this.stationFinderTab);
             this.applicationTabControl.Controls.Add(this.connectionFinderTab);
             this.applicationTabControl.Controls.Add(this.departureBoardTab);
@@ -93,16 +91,6 @@
             this.applicationTabControl.SelectedIndex = 0;
             this.applicationTabControl.Size = new System.Drawing.Size(800, 450);
             this.applicationTabControl.TabIndex = 0;
-            // 
-            // overviewTab
-            // 
-            this.overviewTab.Location = new System.Drawing.Point(4, 24);
-            this.overviewTab.Name = "overviewTab";
-            this.overviewTab.Padding = new System.Windows.Forms.Padding(3);
-            this.overviewTab.Size = new System.Drawing.Size(792, 422);
-            this.overviewTab.TabIndex = 0;
-            this.overviewTab.Text = "Overview";
-            this.overviewTab.UseVisualStyleBackColor = true;
             // 
             // stationFinderTab
             // 
@@ -143,6 +131,18 @@
             this.stationFinderForm.TabIndex = 4;
             this.stationFinderForm.TabStop = false;
             this.stationFinderForm.Text = "Find a Station";
+            // 
+            // stationFinderStationInput
+            // 
+            this.stationFinderStationInput.AllowDrop = true;
+            this.stationFinderStationInput.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.stationFinderStationInput.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.stationFinderStationInput.FormattingEnabled = true;
+            this.stationFinderStationInput.Location = new System.Drawing.Point(94, 22);
+            this.stationFinderStationInput.Name = "stationFinderStationInput";
+            this.stationFinderStationInput.Size = new System.Drawing.Size(197, 23);
+            this.stationFinderStationInput.TabIndex = 7;
+            this.stationFinderStationInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.AutoCompleteComboBoxKeyUp);
             // 
             // stationFinderShowOnMapButton
             // 
@@ -466,8 +466,8 @@
             // departureBoardForm
             // 
             this.departureBoardForm.BackColor = System.Drawing.Color.Transparent;
+            this.departureBoardForm.Controls.Add(this.departureBoardStationSearchInput);
             this.departureBoardForm.Controls.Add(this.label4);
-            this.departureBoardForm.Controls.Add(this.departureBoardStationSearchTextBox);
             this.departureBoardForm.Controls.Add(this.button1);
             this.departureBoardForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.departureBoardForm.Location = new System.Drawing.Point(3, 3);
@@ -476,6 +476,18 @@
             this.departureBoardForm.TabIndex = 4;
             this.departureBoardForm.TabStop = false;
             this.departureBoardForm.Text = "Find Station Departure Board";
+            // 
+            // departureBoardStationSearchInput
+            // 
+            this.departureBoardStationSearchInput.AllowDrop = true;
+            this.departureBoardStationSearchInput.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.departureBoardStationSearchInput.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.departureBoardStationSearchInput.FormattingEnabled = true;
+            this.departureBoardStationSearchInput.Location = new System.Drawing.Point(94, 22);
+            this.departureBoardStationSearchInput.Name = "departureBoardStationSearchInput";
+            this.departureBoardStationSearchInput.Size = new System.Drawing.Size(211, 23);
+            this.departureBoardStationSearchInput.TabIndex = 15;
+            this.departureBoardStationSearchInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.AutoCompleteComboBoxKeyUp);
             // 
             // label4
             // 
@@ -486,13 +498,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Station Name:";
             // 
-            // departureBoardStationSearchTextBox
-            // 
-            this.departureBoardStationSearchTextBox.Location = new System.Drawing.Point(94, 22);
-            this.departureBoardStationSearchTextBox.Name = "departureBoardStationSearchTextBox";
-            this.departureBoardStationSearchTextBox.Size = new System.Drawing.Size(198, 23);
-            this.departureBoardStationSearchTextBox.TabIndex = 13;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(311, 22);
@@ -502,18 +507,6 @@
             this.button1.Text = "View Departure Board";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.ViewDepartureBoard);
-            // 
-            // stationFinderStationInput
-            // 
-            this.stationFinderStationInput.AllowDrop = true;
-            this.stationFinderStationInput.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.stationFinderStationInput.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.stationFinderStationInput.FormattingEnabled = true;
-            this.stationFinderStationInput.Location = new System.Drawing.Point(94, 22);
-            this.stationFinderStationInput.Name = "stationFinderStationInput";
-            this.stationFinderStationInput.Size = new System.Drawing.Size(197, 23);
-            this.stationFinderStationInput.TabIndex = 7;
-            this.stationFinderStationInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.AutoCompleteComboBoxKeyUp);
             // 
             // MainForm
             // 
@@ -542,12 +535,10 @@
         #endregion
 
         private TabControl applicationTabControl;
-        private TabPage overviewTab;
         private TabPage connectionFinderTab;
         private TabPage departureBoardTab;
         private GroupBox departureBoardForm;
         private Label label4;
-        private TextBox departureBoardStationSearchTextBox;
         private Button button1;
         private DataGridView departureBoardTable;
         private DataGridViewTextBoxColumn connectionFinderFrom;
@@ -583,5 +574,6 @@
         private Button connectionFinderTakeMeHomeButton;
         private Button connectionFinderChangeHome;
         private ComboBox stationFinderStationInput;
+        private ComboBox departureBoardStationSearchInput;
     }
 }
