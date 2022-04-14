@@ -19,7 +19,7 @@ namespace SwissTransportGui
 
             for (int i = 0; i < row.Cells.Count; ++i) 
             {
-                result += " " + row.Cells[i].Value;
+                result += row.Cells[i].Value + " ";
             }
 
             return result;

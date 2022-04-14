@@ -1,14 +1,14 @@
 using SwissTransport.Core;
 using SwissTransport.Models;
 
-namespace SwissTransportGui
+namespace SwissTransport.Gui
 {
-    public partial class Form : System.Windows.Forms.Form
+    public partial class MainForm : System.Windows.Forms.Form
     {
         public ITransport transport;
         private Queue<Station> autocompleteStationsBuffer;
 
-        public Form()
+        public MainForm()
         {
             InitializeComponent();
 
@@ -16,7 +16,7 @@ namespace SwissTransportGui
             autocompleteStationsBuffer = new Queue<Station>();
         }
 
-        private void ViewConnections(object sender, EventArgs e)
+        private void FindConnections(object sender, EventArgs e)
         {
             try
             {
@@ -129,39 +129,15 @@ namespace SwissTransportGui
 
         private void ConnectionFinderFromInputKeyUp(object sender, KeyEventArgs e)
         {
-            AutocompletionHandler((ComboBox)sender, e);
+            Util.AutocompletionHandler((ComboBox)sender, e, transport);
         }
 
         private void ConnectionFinderToInputKeyUp(object sender, KeyEventArgs e)
         {
-            AutocompletionHandler((ComboBox)sender, e);
+            Util.AutocompletionHandler((ComboBox)sender, e, transport);
         }
 
-        private void AutocompletionHandler(ComboBox comboBox, KeyEventArgs e)
-        {
-            try
-            {
-                // don't autocomplete: until 2 characters are entered, and other filters
-                if (comboBox.Text.Length <= 1
-                    || e.KeyCode == Keys.Enter
-                    || Char.IsControl((char)e.KeyCode))
-                {
-                    return;
-                }
 
-                //connectionFinderFromInput.Items.Clear();
-
-                // accumulate stations
-                foreach (Station station in transport.GetStations(comboBox.Text).StationList)
-                {
-                    comboBox.Items.Add(station.Name);
-                }
-
-                comboBox.SelectionStart = comboBox.Text.Length;
-            }
-            catch
-            {}
-        }
 
         private void ConnectionFinderCustomDateCheckCheckedChanged(object sender, EventArgs e)
         {
@@ -216,8 +192,23 @@ namespace SwissTransportGui
 
         private void TakeMeHome(object sender, EventArgs e)
         {
-         //   TakeMeHomeForm takeMeHomeForm = new TakeMeHomeForm();
-          //  takeMeHomeForm.Show();
+            if (File.Exists(Util.DATFILE))
+            {
+                connectionFinderFromInput.Text = transport.GetNearestStations().StationList[0].Name;
+                connectionFinderToInput.Text = File.ReadAllLines(Util.DATFILE)[0];
+
+                FindConnections(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("You currently have no home stop set. You can set your home stop with the set home button", "Take Me Home");
+            }
+        }
+
+        private void TakeMeHomeSettings(object sender, EventArgs e)
+        {
+            TakeMeHomeSettingsForm takeMeHomeForm = new TakeMeHomeSettingsForm();
+            takeMeHomeForm.Show();
         }
     }
 }

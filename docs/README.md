@@ -1,7 +1,8 @@
 # Dokumentation
 
 - [Dokumentation](#dokumentation)
-  - [User Stories](#user-stories)
+  - [User Stories](#User Stories)
+  - [Test Fälle](#Test Fälle)
   - [Mockups](#mockups)
     - [Abfahrtstafel](#abfahrtstafel)
     - [Verbindungssuche](#verbindungssuche)
@@ -19,6 +20,12 @@
 | **7** | **Stationenkarte**<br />Als Benutzer möchte ich eine Station auf einer Karte sehen können, um zu wissen, wo sich die Station befindet. | - Station auswählen<br />- Station auf interaktiver Karte einzeichnen | 3           |
 | **8** | **Verbindung teilen**<br />Als Benutzer möchte ich eine Verbindung per Email teilen können, um andere über eine Verbindung informieren zu können. | - Verbindung auswählen<br />- Textfeld für Empfänger-Email Adresse<br />- Textfeld für optionale Nachricht<br />- Uhrzeit, Start- und Endstation der Verbindung an Empfänger senden | 3           |
 | **9** | **Take Me Home**<br />Als Benutzer möchte ich einen "Take Me Home" Shortcut haben können, um mir die schnellste Verbindung von meinem aktuellen Standort zu meiner Heimadresse zu geben. | - Einstellung für Heimadresse<br />- Standort erfassen<br />- Nächste Startstation zum aktuellen Standort finden<br />- Nächste Endstation zu Heimadresse finden<br /> | Eigene Idee |
+
+
+
+## Test Fälle
+
+
 
 
 

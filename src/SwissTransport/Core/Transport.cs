@@ -25,8 +25,13 @@
 
         public Stations GetNearestStations()
         {
-            var locationUri = new Uri($"http://ip-api.com/line/?fields=lat,lon");
-            string[] location = this.GetPlainText(locationUri).Split("\n");
+            string[] location = this.GetPlainText(new Uri($"http://ip-api.com/line/?fields=lat,lon")).Split("\n");
+
+            if (string.IsNullOrEmpty(location[0]) 
+                || string.IsNullOrEmpty(location[1]))
+            {
+                throw new NullReferenceException();
+            }
 
             var uri = new Uri($"{WebApiHost}locations?x={location[0]}&y={location[1]}");
             return this.GetObject<Stations>(uri);
