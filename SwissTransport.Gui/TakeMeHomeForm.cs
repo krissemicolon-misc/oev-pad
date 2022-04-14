@@ -12,13 +12,24 @@ namespace SwissTransport.Gui
             InitializeComponent();
             transport = new Transport();
 
-            homeStopInput.Text = File.ReadAllLines(Util.DATFILE)[0];
+            try
+            {
+                homeStopInput.Text = File.ReadAllLines(Util.DATFILE)[0];
+            }
+            catch { }
         }
 
         private void SaveHomeStop(object sender, EventArgs e)
         {
-            File.WriteAllText(Util.DATFILE, homeStopInput.Text);
-            this.Close();
+            try
+            {
+                File.WriteAllText(Util.DATFILE, homeStopInput.Text);
+                this.Close();
+            }
+            catch 
+            {
+                Util.ShowError("Saving Home Stop", "Error while trying to write home stop to file");
+            }
         }
 
         private void HomeStopInputKeyUp(object sender, KeyEventArgs e)

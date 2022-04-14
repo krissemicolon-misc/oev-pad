@@ -15,7 +15,7 @@ namespace SwissTransport.Gui
 {
     public class Util
     {
-        public static string DATFILE = $"{Path.GetTempPath}oev-pad.dat";
+        public static string DATFILE = Path.GetTempPath() + "oev-pad.dat";
 
         public static string GridViewStringify(DataGridViewRow row) 
         {
