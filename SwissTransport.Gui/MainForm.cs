@@ -201,7 +201,8 @@ namespace SwissTransport.Gui
             }
             else
             {
-                MessageBox.Show("You currently have no home stop set. You can set your home stop with the set home button", "Take Me Home");
+                MessageBox.Show("You currently have no home stop set. You can set one now.", "Take Me Home");
+                TakeMeHomeSettings(sender, e);
             }
         }
 
