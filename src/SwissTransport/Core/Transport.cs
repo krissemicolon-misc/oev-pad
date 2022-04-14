@@ -27,7 +27,7 @@
         {
             string[] location = this.GetPlainText(new Uri($"http://ip-api.com/line/?fields=lat,lon")).Split("\n");
 
-            if (string.IsNullOrEmpty(location[0]) 
+            if (string.IsNullOrEmpty(location[0])
                 || string.IsNullOrEmpty(location[1]))
             {
                 throw new NullReferenceException();

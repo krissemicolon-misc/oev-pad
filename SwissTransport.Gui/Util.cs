@@ -31,7 +31,11 @@ namespace SwissTransport.Gui
 
         public static void EmailPopup(string emailAddress, string subject, string body)
         {
-            Process.Start(@"mailto:" + emailAddress + "?subject=" + subject + "&body=" + body);
+
+            ProcessStartInfo psi = new ProcessStartInfo();
+            psi.UseShellExecute = true;
+            psi.FileName = @"mailto:" + emailAddress + "?subject=" + subject + "&body=" + body;
+            Process.Start(psi);
         }
 
         public static void ShowError(string title, string message)

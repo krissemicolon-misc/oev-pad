@@ -1,5 +1,8 @@
+#pragma warning disable CS8602
+
 using SwissTransport.Core;
 using SwissTransport.Models;
+using System.Diagnostics;
 
 namespace SwissTransport.Gui
 {
@@ -127,17 +130,10 @@ namespace SwissTransport.Gui
             }
         }
 
-        private void ConnectionFinderFromInputKeyUp(object sender, KeyEventArgs e)
+        private void ConnectionFinderInputKeyUp(object sender, KeyEventArgs e)
         {
             Util.AutocompletionHandler((ComboBox)sender, e, transport);
         }
-
-        private void ConnectionFinderToInputKeyUp(object sender, KeyEventArgs e)
-        {
-            Util.AutocompletionHandler((ComboBox)sender, e, transport);
-        }
-
-
 
         private void ConnectionFinderCustomDateCheckCheckedChanged(object sender, EventArgs e)
         {
@@ -182,7 +178,16 @@ namespace SwissTransport.Gui
             try
             {
                 Station station = transport.GetStations(stationFinderStationList.GetItemText(stationFinderStationList.SelectedItem)).StationList[0];
-                System.Diagnostics.Process.Start($"https://www.openstreetmap.org/?mlat={station.Coordinate.XCoordinate}&mlon={station.Coordinate.YCoordinate}");
+
+                // generating google maps uri
+                string uri = $"https://www.google.com/maps/search/?api=1&query=" +
+                    $"{station.Coordinate.XCoordinate.ToString().Replace(",", ".")}," +
+                    $"{station.Coordinate.YCoordinate.ToString().Replace(",", ".")}";
+
+                ProcessStartInfo psi = new ProcessStartInfo();
+                psi.UseShellExecute = true;
+                psi.FileName = uri;
+                Process.Start(psi);
             }
             catch
             {

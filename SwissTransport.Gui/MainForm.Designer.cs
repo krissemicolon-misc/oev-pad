@@ -124,7 +124,7 @@
             this.stationFinderStationList.Location = new System.Drawing.Point(3, 62);
             this.stationFinderStationList.Name = "stationFinderStationList";
             this.stationFinderStationList.Size = new System.Drawing.Size(786, 357);
-            this.stationFinderStationList.TabIndex = 8;
+            this.stationFinderStationList.TabIndex = 7;
             // 
             // stationFinderForm
             // 
@@ -149,7 +149,7 @@
             this.stationFinderShowOnMapButton.Location = new System.Drawing.Point(496, 21);
             this.stationFinderShowOnMapButton.Name = "stationFinderShowOnMapButton";
             this.stationFinderShowOnMapButton.Size = new System.Drawing.Size(149, 24);
-            this.stationFinderShowOnMapButton.TabIndex = 9;
+            this.stationFinderShowOnMapButton.TabIndex = 5;
             this.stationFinderShowOnMapButton.Text = "View Location in Browser";
             this.stationFinderShowOnMapButton.UseVisualStyleBackColor = true;
             this.stationFinderShowOnMapButton.Click += new System.EventHandler(this.ShowStationLocationInBrowser);
@@ -159,7 +159,7 @@
             this.stationFinderFindNearestButton.Location = new System.Drawing.Point(651, 21);
             this.stationFinderFindNearestButton.Name = "stationFinderFindNearestButton";
             this.stationFinderFindNearestButton.Size = new System.Drawing.Size(129, 24);
-            this.stationFinderFindNearestButton.TabIndex = 8;
+            this.stationFinderFindNearestButton.TabIndex = 6;
             this.stationFinderFindNearestButton.Text = "Find Nearest Station";
             this.stationFinderFindNearestButton.UseVisualStyleBackColor = true;
             this.stationFinderFindNearestButton.Click += new System.EventHandler(this.StationFinderFindNearestStation);
@@ -178,7 +178,7 @@
             this.stationFinderToButton.Location = new System.Drawing.Point(421, 21);
             this.stationFinderToButton.Name = "stationFinderToButton";
             this.stationFinderToButton.Size = new System.Drawing.Size(50, 24);
-            this.stationFinderToButton.TabIndex = 7;
+            this.stationFinderToButton.TabIndex = 4;
             this.stationFinderToButton.Text = "To";
             this.stationFinderToButton.UseVisualStyleBackColor = true;
             this.stationFinderToButton.Click += new System.EventHandler(this.StationFinderSelectTo);
@@ -188,14 +188,14 @@
             this.stationFinderStationTextBox.Location = new System.Drawing.Point(94, 22);
             this.stationFinderStationTextBox.Name = "stationFinderStationTextBox";
             this.stationFinderStationTextBox.Size = new System.Drawing.Size(198, 23);
-            this.stationFinderStationTextBox.TabIndex = 0;
+            this.stationFinderStationTextBox.TabIndex = 1;
             // 
             // stationFinderFromButton
             // 
             this.stationFinderFromButton.Location = new System.Drawing.Point(365, 21);
             this.stationFinderFromButton.Name = "stationFinderFromButton";
             this.stationFinderFromButton.Size = new System.Drawing.Size(50, 24);
-            this.stationFinderFromButton.TabIndex = 6;
+            this.stationFinderFromButton.TabIndex = 3;
             this.stationFinderFromButton.Text = "From";
             this.stationFinderFromButton.UseVisualStyleBackColor = true;
             this.stationFinderFromButton.Click += new System.EventHandler(this.StationFinderSelectFrom);
@@ -240,7 +240,7 @@
             this.connectionsFinderConnectionsTable.RowHeadersWidth = 20;
             this.connectionsFinderConnectionsTable.RowTemplate.Height = 25;
             this.connectionsFinderConnectionsTable.Size = new System.Drawing.Size(786, 331);
-            this.connectionsFinderConnectionsTable.TabIndex = 5;
+            this.connectionsFinderConnectionsTable.TabIndex = 12;
             // 
             // connectionFinderFrom
             // 
@@ -303,7 +303,7 @@
             this.connectionFinderChangeHome.Location = new System.Drawing.Point(487, 52);
             this.connectionFinderChangeHome.Name = "connectionFinderChangeHome";
             this.connectionFinderChangeHome.Size = new System.Drawing.Size(95, 23);
-            this.connectionFinderChangeHome.TabIndex = 11;
+            this.connectionFinderChangeHome.TabIndex = 10;
             this.connectionFinderChangeHome.Text = "Set Home";
             this.connectionFinderChangeHome.UseVisualStyleBackColor = true;
             this.connectionFinderChangeHome.Click += new System.EventHandler(this.TakeMeHomeSettings);
@@ -313,7 +313,7 @@
             this.connectionFinderTakeMeHomeButton.Location = new System.Drawing.Point(370, 52);
             this.connectionFinderTakeMeHomeButton.Name = "connectionFinderTakeMeHomeButton";
             this.connectionFinderTakeMeHomeButton.Size = new System.Drawing.Size(111, 23);
-            this.connectionFinderTakeMeHomeButton.TabIndex = 10;
+            this.connectionFinderTakeMeHomeButton.TabIndex = 9;
             this.connectionFinderTakeMeHomeButton.Text = "Take Me Home";
             this.connectionFinderTakeMeHomeButton.UseVisualStyleBackColor = true;
             this.connectionFinderTakeMeHomeButton.Click += new System.EventHandler(this.TakeMeHome);
@@ -325,7 +325,7 @@
             this.connectionFinderEmailShareButton.Location = new System.Drawing.Point(669, 22);
             this.connectionFinderEmailShareButton.Name = "connectionFinderEmailShareButton";
             this.connectionFinderEmailShareButton.Size = new System.Drawing.Size(111, 57);
-            this.connectionFinderEmailShareButton.TabIndex = 9;
+            this.connectionFinderEmailShareButton.TabIndex = 11;
             this.connectionFinderEmailShareButton.Text = "Share Connection over Email";
             this.connectionFinderEmailShareButton.UseVisualStyleBackColor = false;
             this.connectionFinderEmailShareButton.Click += new System.EventHandler(this.ShareConnectionOverEmail);
@@ -336,7 +336,7 @@
             this.connectionFinderCustomDateCheck.Location = new System.Drawing.Point(487, 24);
             this.connectionFinderCustomDateCheck.Name = "connectionFinderCustomDateCheck";
             this.connectionFinderCustomDateCheck.Size = new System.Drawing.Size(95, 19);
-            this.connectionFinderCustomDateCheck.TabIndex = 8;
+            this.connectionFinderCustomDateCheck.TabIndex = 7;
             this.connectionFinderCustomDateCheck.Text = "Custom Date";
             this.connectionFinderCustomDateCheck.UseVisualStyleBackColor = true;
             this.connectionFinderCustomDateCheck.CheckedChanged += new System.EventHandler(this.ConnectionFinderCustomDateCheckCheckedChanged);
@@ -347,7 +347,7 @@
             this.connectionFinderDatePicker.Location = new System.Drawing.Point(253, 22);
             this.connectionFinderDatePicker.Name = "connectionFinderDatePicker";
             this.connectionFinderDatePicker.Size = new System.Drawing.Size(228, 23);
-            this.connectionFinderDatePicker.TabIndex = 7;
+            this.connectionFinderDatePicker.TabIndex = 8;
             this.connectionFinderDatePicker.Value = new System.DateTime(2022, 4, 12, 16, 0, 52, 0);
             // 
             // connectionFinderToInput
@@ -360,7 +360,7 @@
             this.connectionFinderToInput.Name = "connectionFinderToInput";
             this.connectionFinderToInput.Size = new System.Drawing.Size(197, 23);
             this.connectionFinderToInput.TabIndex = 6;
-            this.connectionFinderToInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ConnectionFinderToInputKeyUp);
+            this.connectionFinderToInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ConnectionFinderInputKeyUp);
             // 
             // connectionFinderFromInput
             // 
@@ -372,7 +372,7 @@
             this.connectionFinderFromInput.Name = "connectionFinderFromInput";
             this.connectionFinderFromInput.Size = new System.Drawing.Size(197, 23);
             this.connectionFinderFromInput.TabIndex = 5;
-            this.connectionFinderFromInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ConnectionFinderFromInputKeyUp);
+            this.connectionFinderFromInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ConnectionFinderInputKeyUp);
             // 
             // label2
             // 
@@ -397,7 +397,7 @@
             this.connectionFinderViewConnectionsButton.Location = new System.Drawing.Point(253, 52);
             this.connectionFinderViewConnectionsButton.Name = "connectionFinderViewConnectionsButton";
             this.connectionFinderViewConnectionsButton.Size = new System.Drawing.Size(111, 23);
-            this.connectionFinderViewConnectionsButton.TabIndex = 2;
+            this.connectionFinderViewConnectionsButton.TabIndex = 8;
             this.connectionFinderViewConnectionsButton.Text = "View Connections";
             this.connectionFinderViewConnectionsButton.UseVisualStyleBackColor = true;
             this.connectionFinderViewConnectionsButton.Click += new System.EventHandler(this.FindConnections);
@@ -432,7 +432,7 @@
             this.departureBoardTable.ReadOnly = true;
             this.departureBoardTable.RowTemplate.Height = 25;
             this.departureBoardTable.Size = new System.Drawing.Size(786, 359);
-            this.departureBoardTable.TabIndex = 5;
+            this.departureBoardTable.TabIndex = 15;
             // 
             // departureBoardName
             // 
@@ -498,14 +498,14 @@
             this.departureBoardStationSearchTextBox.Location = new System.Drawing.Point(94, 22);
             this.departureBoardStationSearchTextBox.Name = "departureBoardStationSearchTextBox";
             this.departureBoardStationSearchTextBox.Size = new System.Drawing.Size(198, 23);
-            this.departureBoardStationSearchTextBox.TabIndex = 0;
+            this.departureBoardStationSearchTextBox.TabIndex = 13;
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(311, 22);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 23);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 14;
             this.button1.Text = "View Departure Board";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.ViewDepartureBoard);
