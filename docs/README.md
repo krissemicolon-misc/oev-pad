@@ -160,3 +160,16 @@ Diese Dokumentation ist dazu da, um die Projektarbeit in menschlicher Sprache le
 | Schritt | Aktivität                                 | Erwartetes Resultat                                          |
 | ------- | ----------------------------------------- | ------------------------------------------------------------ |
 | 1       | Ich drücke auf den "Take Me Home" Button. | Wenn ich den Home Stop schon gesetzt habe wird dieser im to eingesetzt und im from wird die mir am nächsten Station eingesetzt und es werden Verbindungen angezeigt die mich nach Hause bringen. Falls den Home Stop noch nicht gesetzt habe wird ein Dialog aufgemacht der mich den Home Stop Setzten lässt |
+
+## Testprotokoll
+
+| Test | Testperson | Datum | Status|
+| ----------- | --------- | ------ | --------------------------------- |
+| Verbindungen suchen                  | Silas Reichlin | 14.04.2022 | ✅  |
+| Abfartstafel | Silas Reichlin | 14.04.2022 | ✅ |
+| Station suchen | Silas Reichlin | 14.04.2022 | ✅  |
+| Verbindung suchen mit Datum und Zeit| Silas Reichlin | 14.04.2022 | ✅  |
+| Station in der Nähe | Silas Reichlin | 14.04.2022 |✅ |
+| Karte | Silas Reichlin |14.04.2022|✅ |
+| Verbindung teilen | Silas Reichlin |14.04.2022|✅ |
+| Take me Home | Silas Reichlin |14.04.2022|✅ |
