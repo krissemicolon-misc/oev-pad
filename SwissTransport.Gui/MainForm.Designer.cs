@@ -37,7 +37,6 @@
             this.stationFinderFindNearestButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.stationFinderToButton = new System.Windows.Forms.Button();
-            this.stationFinderStationTextBox = new System.Windows.Forms.TextBox();
             this.stationFinderFromButton = new System.Windows.Forms.Button();
             this.stationFinderButton = new System.Windows.Forms.Button();
             this.connectionFinderTab = new System.Windows.Forms.TabPage();
@@ -70,6 +69,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.departureBoardStationSearchTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.stationFinderStationInput = new System.Windows.Forms.ComboBox();
             this.applicationTabControl.SuspendLayout();
             this.stationFinderTab.SuspendLayout();
             this.stationFinderForm.SuspendLayout();
@@ -129,11 +129,11 @@
             // stationFinderForm
             // 
             this.stationFinderForm.BackColor = System.Drawing.Color.Transparent;
+            this.stationFinderForm.Controls.Add(this.stationFinderStationInput);
             this.stationFinderForm.Controls.Add(this.stationFinderShowOnMapButton);
             this.stationFinderForm.Controls.Add(this.stationFinderFindNearestButton);
             this.stationFinderForm.Controls.Add(this.label5);
             this.stationFinderForm.Controls.Add(this.stationFinderToButton);
-            this.stationFinderForm.Controls.Add(this.stationFinderStationTextBox);
             this.stationFinderForm.Controls.Add(this.stationFinderFromButton);
             this.stationFinderForm.Controls.Add(this.stationFinderButton);
             this.stationFinderForm.Dock = System.Windows.Forms.DockStyle.Top;
@@ -183,13 +183,6 @@
             this.stationFinderToButton.UseVisualStyleBackColor = true;
             this.stationFinderToButton.Click += new System.EventHandler(this.StationFinderSelectTo);
             // 
-            // stationFinderStationTextBox
-            // 
-            this.stationFinderStationTextBox.Location = new System.Drawing.Point(94, 22);
-            this.stationFinderStationTextBox.Name = "stationFinderStationTextBox";
-            this.stationFinderStationTextBox.Size = new System.Drawing.Size(198, 23);
-            this.stationFinderStationTextBox.TabIndex = 1;
-            // 
             // stationFinderFromButton
             // 
             this.stationFinderFromButton.Location = new System.Drawing.Point(365, 21);
@@ -202,7 +195,7 @@
             // 
             // stationFinderButton
             // 
-            this.stationFinderButton.Location = new System.Drawing.Point(298, 21);
+            this.stationFinderButton.Location = new System.Drawing.Point(297, 21);
             this.stationFinderButton.Name = "stationFinderButton";
             this.stationFinderButton.Size = new System.Drawing.Size(38, 24);
             this.stationFinderButton.TabIndex = 2;
@@ -360,7 +353,7 @@
             this.connectionFinderToInput.Name = "connectionFinderToInput";
             this.connectionFinderToInput.Size = new System.Drawing.Size(197, 23);
             this.connectionFinderToInput.TabIndex = 6;
-            this.connectionFinderToInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ConnectionFinderInputKeyUp);
+            this.connectionFinderToInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.AutoCompleteComboBoxKeyUp);
             // 
             // connectionFinderFromInput
             // 
@@ -372,7 +365,7 @@
             this.connectionFinderFromInput.Name = "connectionFinderFromInput";
             this.connectionFinderFromInput.Size = new System.Drawing.Size(197, 23);
             this.connectionFinderFromInput.TabIndex = 5;
-            this.connectionFinderFromInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ConnectionFinderInputKeyUp);
+            this.connectionFinderFromInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.AutoCompleteComboBoxKeyUp);
             // 
             // label2
             // 
@@ -510,6 +503,18 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.ViewDepartureBoard);
             // 
+            // stationFinderStationInput
+            // 
+            this.stationFinderStationInput.AllowDrop = true;
+            this.stationFinderStationInput.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.stationFinderStationInput.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.stationFinderStationInput.FormattingEnabled = true;
+            this.stationFinderStationInput.Location = new System.Drawing.Point(94, 22);
+            this.stationFinderStationInput.Name = "stationFinderStationInput";
+            this.stationFinderStationInput.Size = new System.Drawing.Size(197, 23);
+            this.stationFinderStationInput.TabIndex = 7;
+            this.stationFinderStationInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.AutoCompleteComboBoxKeyUp);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -564,7 +569,6 @@
         private TabPage stationFinderTab;
         private GroupBox stationFinderForm;
         private Label label5;
-        private TextBox stationFinderStationTextBox;
         private Button stationFinderButton;
         private Button stationFinderToButton;
         private Button stationFinderFromButton;
@@ -578,5 +582,6 @@
         private Button stationFinderShowOnMapButton;
         private Button connectionFinderTakeMeHomeButton;
         private Button connectionFinderChangeHome;
+        private ComboBox stationFinderStationInput;
     }
 }

@@ -85,7 +85,7 @@ namespace SwissTransport.Gui
             {
                 stationFinderStationList.Items.Clear();
 
-                List<Station> stations = transport.GetStations(stationFinderStationTextBox.Text).StationList;
+                List<Station> stations = transport.GetStations(stationFinderStationInput.Text).StationList;
 
                 foreach (Station station in stations)
                 {
@@ -130,7 +130,7 @@ namespace SwissTransport.Gui
             }
         }
 
-        private void ConnectionFinderInputKeyUp(object sender, KeyEventArgs e)
+        private void AutoCompleteComboBoxKeyUp(object sender, KeyEventArgs e)
         {
             Util.AutocompletionHandler((ComboBox)sender, e, transport);
         }
